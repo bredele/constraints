@@ -1,4 +1,4 @@
-
+var hasOwnProperty = Object.prototype.hasOwnProperty;
 
 /**
  * Expose 'constraints'
@@ -6,12 +6,44 @@
  * @api public
  */
 
-module.exports = function(options) {
+module.exports = function() {
+
+  /**
+   * Constraints.
+   */
 
   var that = {}
 
-  that.audio = function() {
 
+  /**
+   * WebRTC constraints
+   */
+
+  var options = {}
+
+  /**
+   * Extend options with
+   * arguments.
+   */
+
+  for (var i = arguments.length; i--;) {
+      var source = arguments[i]
+      for (var key in source) {
+          if (hasOwnProperty.call(source, key)) {
+              options[key] = source[key]
+          }
+      }
+  }
+
+  /**
+   * Return audio constraint.
+   *
+   * @return {Boolean}
+   * @api public
+   */
+
+  that.audio = function() {
+    return options.audio != null && options.audio === true
   }
 
   that.video = function() {
@@ -25,6 +57,13 @@ module.exports = function(options) {
   that.channel =  function() {
 
   }
+
+  /**
+   * Return channel constraint.
+   *
+   * @return {Boolean}
+   * @api public
+   */
 
   that.channel = function() {
     return options.channel != null && options.channel === true
