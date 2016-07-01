@@ -22,6 +22,10 @@ module.exports = function(options) {
 
   }
 
+  that.channel =  function() {
+    
+  }
+
   // will return new constraints object
   that.select = function() {
 
