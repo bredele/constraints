@@ -26,7 +26,7 @@ module.exports = function(options) {
 
   }
 
-  that.media = function() {
+  that.channel = function() {
     return options.channel != null && options.channel === true
   }
 
