@@ -27,7 +27,7 @@ module.exports = function(options) {
   }
 
   that.media = function() {
-
+    return options.channel != null && options.channel === true
   }
 
   that.peer = function() {
@@ -35,7 +35,7 @@ module.exports = function(options) {
   }
 
   that.session = function() {
-    
+
   }
 
   // will return new constraints object
