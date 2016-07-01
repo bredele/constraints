@@ -1,5 +1,6 @@
 var hasOwnProperty = Object.prototype.hasOwnProperty;
 
+
 /**
  * Expose 'constraints'
  *
@@ -54,9 +55,6 @@ module.exports = function() {
 
   }
 
-  that.channel =  function() {
-
-  }
 
   /**
    * Return channel constraint.
