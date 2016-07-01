@@ -23,6 +23,18 @@ module.exports = function(options) {
   }
 
   that.channel =  function() {
+
+  }
+
+  that.media = function() {
+
+  }
+
+  that.peer = function() {
+
+  }
+
+  that.session = function() {
     
   }
 
