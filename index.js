@@ -7,7 +7,7 @@
  */
 
 module.exports = function(options) {
-  
+
   var that = {}
 
   that.audio = function() {
@@ -15,6 +15,11 @@ module.exports = function(options) {
   }
 
   that.video = function() {
+
+  }
+
+  // will return new constraints object
+  that.select = function() {
 
   }
 
