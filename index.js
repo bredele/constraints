@@ -18,6 +18,10 @@ module.exports = function(options) {
 
   }
 
+  that.servers = function() {
+
+  }
+
   // will return new constraints object
   that.select = function() {
 
